@@ -29,6 +29,10 @@
   .faculty-grid {
     gap: 40px;
   }
+
+  .faculty-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ── 1024px — Tablet Landscape ── */
@@ -281,10 +285,33 @@
   .page-hero {
     padding: 80px 0 56px;
   }
+
+  /* Faculty team */
+  .faculty-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Profile body grid (about page) */
+  .profile-body-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Story / Our Story inline grid */
+  .story-grid-inline {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
 }
 
 /* ── 640px — Small Mobile ── */
 @media (max-width: 640px) {
+  .faculty-team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;

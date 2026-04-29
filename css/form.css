@@ -217,6 +217,13 @@ select.form-control {
   margin: 0 auto;
 }
 
+/* Contact info cards grid */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .form-grid {
@@ -235,5 +242,29 @@ select.form-control {
   .contact-form-layout {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-card-compact {
+    padding: 28px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card-compact {
+    padding: 22px 14px;
+  }
+
+  .contact-info-grid {
+    gap: 14px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 14px 24px;
   }
 }

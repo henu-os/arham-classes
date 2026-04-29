@@ -968,3 +968,171 @@
   color: var(--text-light);
   line-height: 1.6;
 }
+
+/* ── FACULTY TEAM SECTION ── */
+.faculty-team-section {
+  background: var(--cream);
+  padding: var(--section-py) 0;
+}
+
+.faculty-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.faculty-member-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--gold-bright);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-member-card:hover {
+  box-shadow: var(--shadow-gold-lg);
+  transform: translateY(-8px);
+}
+
+.faculty-member-photo {
+  height: 300px;
+  background: var(--grad-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.faculty-member-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.06));
+  pointer-events: none;
+}
+
+.faculty-member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.faculty-member-card:hover .faculty-member-photo img {
+  transform: scale(1.04);
+}
+
+.faculty-member-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--grad-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border: 3px solid rgba(200,151,42,0.6);
+  box-shadow: var(--shadow-gold);
+}
+
+.faculty-member-body {
+  padding: 24px 22px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faculty-member-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 2px;
+  line-height: 1.25;
+}
+
+.faculty-member-subject {
+  display: inline-block;
+  background: var(--grad-gold);
+  color: var(--navy-deep);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 4px;
+}
+
+.faculty-member-role {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+.faculty-member-bio {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.faculty-member-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(10,22,40,0.08);
+}
+
+.faculty-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.faculty-contact-item:hover {
+  color: var(--gold);
+}
+
+.faculty-contact-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--navy-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ── Profile card body grid (replaces inline style) ── */
+.profile-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
