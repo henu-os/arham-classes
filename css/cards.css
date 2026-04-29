@@ -1,0 +1,172 @@
+/* ============================================================
+   CARDS — cards.css  (gallery, feature, flip, testimonials)
+   ============================================================ */
+
+/* ── Generic Feature Card ── */
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(10,22,40,0.07);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-card:hover {
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-8px);
+  border-color: rgba(200,151,42,0.3);
+}
+
+.feature-card .fc-icon {
+  font-size: 40px;
+  display: block;
+}
+
+.feature-card h3 {
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── Profile / Faculty card ── */
+.profile-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(200,151,42,0.2);
+}
+
+.profile-card-header {
+  background: var(--grad-navy);
+  padding: 48px 36px;
+  text-align: center;
+  position: relative;
+}
+
+.profile-photo-frame {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+  box-shadow: var(--glow-gold);
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background: var(--navy-mid);
+}
+
+.profile-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: var(--gold-bright);
+  margin-bottom: 6px;
+}
+
+.profile-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.profile-qual {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+}
+
+.profile-card-body {
+  padding: 36px;
+}
+
+/* ── Count-up stat ── */
+.count-up-num {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Admission Card ── */
+.admission-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border-top: 6px solid var(--gold-bright);
+  padding: 48px 40px;
+}
+
+/* ── Gallery card hover ── */
+.gallery-item.hidden {
+  display: none;
+}
+
+/* ── Batch info card ── */
+.batch-info {
+  background: var(--navy-deep);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 48px 0;
+}
+
+.batch-info h3 {
+  color: var(--gold-bright);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.batch-info p {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.batch-highlights {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.batch-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.batch-highlight .bh-num {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.batch-highlight .bh-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}

@@ -1,0 +1,239 @@
+/* ============================================================
+   FORM — form.css
+   ============================================================ */
+
+.form-section {
+  padding: var(--section-py) 0;
+  background: var(--cream);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── Form card ── */
+.form-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border-top: 6px solid var(--gold-bright);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 40px;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+/* ── Field groups ── */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.form-group label .req {
+  color: #CC0000;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  border: 2px solid #E0E0E0;
+  border-radius: var(--radius-md);
+  padding: 13px 18px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--cream);
+  color: var(--text-body);
+  outline: none;
+  transition: var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-control:focus {
+  border-color: var(--gold-bright);
+  background: var(--gold-pale);
+  box-shadow: 0 0 0 4px rgba(200, 151, 42, 0.15);
+}
+
+.form-control.error {
+  border-color: #CC0000;
+  background: #fff5f5;
+}
+
+.form-control.success {
+  border-color: #22c55e;
+}
+
+.form-error {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: #CC0000;
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.form-error.visible {
+  display: flex;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+select.form-control {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%23888' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 42px;
+  cursor: pointer;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--grad-gold);
+  color: var(--navy-deep);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 17px;
+  padding: 16px 32px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  box-shadow: var(--shadow-gold);
+  margin-top: 8px;
+  min-height: 56px;
+}
+
+.submit-btn:hover {
+  box-shadow: var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ── Form info sidebar ── */
+.form-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-info-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(200,151,42,0.3);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: var(--transition);
+}
+
+.form-info-card:hover {
+  border-color: var(--gold-bright);
+  box-shadow: var(--shadow-gold);
+}
+
+.form-info-card h4 {
+  color: var(--gold-bright);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-info-card p,
+.form-info-card a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+
+.form-info-card a:hover { color: var(--gold-bright); }
+
+/* ── Compact form (contact page) ── */
+.form-card-compact {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border-top: 5px solid var(--gold-bright);
+  box-shadow: var(--shadow-md);
+  padding: 36px 32px;
+}
+
+.contact-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .form-card {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}

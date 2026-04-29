@@ -1,0 +1,255 @@
+/* ============================================================
+   ANIMATIONS — animations.css
+   All keyframes and scroll-reveal classes
+   ============================================================ */
+
+/* ── CSS Keyframes ── */
+
+@keyframes goldShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 300% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-16px) rotate(1deg); }
+}
+
+@keyframes lottieFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes marqueeTick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes wpPulse {
+  0%   { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0.7), 0 6px 28px rgba(37,211,102,0.5); }
+  70%  { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0),   0 6px 28px rgba(37,211,102,0.5); }
+  100% { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0),   0 6px 28px rgba(37,211,102,0.5); }
+}
+
+@keyframes admissionPulse {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(240, 180, 41, 0.6); }
+  50%       { box-shadow: 0 0 0 16px rgba(240, 180, 41, 0); }
+}
+
+@keyframes badgeRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes wordReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes borderPulse {
+  0%, 100% { border-color: var(--gold); }
+  50%       { border-color: var(--gold-bright); box-shadow: var(--glow-gold); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Scroll Reveal System ── */
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease;
+}
+
+.reveal.from-bottom {
+  transform: translateY(52px);
+}
+
+.reveal.from-left {
+  transform: translateX(-65px);
+}
+
+.reveal.from-right {
+  transform: translateX(65px);
+}
+
+.reveal.scale-in {
+  transform: scale(0.88);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* ── Stagger within reveal-stagger containers ── */
+
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 0.15s; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 0.25s; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.35s; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 0.45s; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+/* Also works with direct children */
+.stagger-1 { transition-delay: 0.05s !important; }
+.stagger-2 { transition-delay: 0.15s !important; }
+.stagger-3 { transition-delay: 0.25s !important; }
+.stagger-4 { transition-delay: 0.35s !important; }
+.stagger-5 { transition-delay: 0.45s !important; }
+
+/* ── Hero word-by-word reveal ── */
+
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+}
+
+.word-reveal.visible {
+  animation: wordReveal 0.6s ease forwards;
+}
+
+/* ── Entrance animations (immediate, no scroll) ── */
+
+.animate-fade-up {
+  animation: fadeInUp 0.7s ease both;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.7s ease both;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.7s ease both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease both;
+}
+
+/* Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ── Loading spinner ── */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(10,22,40,0.3);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ── Toast notification ── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: var(--navy-deep);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cream);
+  min-width: 300px;
+  max-width: 420px;
+  transform: translateX(200%);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.toast.show {
+  transform: translateX(0);
+}
+
+.toast .toast-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.toast .toast-close {
+  margin-left: auto;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  font-size: 18px;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.toast .toast-close:hover {
+  color: var(--gold-bright);
+}

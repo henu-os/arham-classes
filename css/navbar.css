@@ -1,0 +1,318 @@
+/* ============================================================
+   NAVBAR STYLES — navbar.css
+   ============================================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 22, 40, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 151, 42, 0.3);
+  padding: 14px 0;
+  transition: var(--transition);
+}
+
+.navbar.scrolled {
+  background: rgba(6, 14, 26, 0.98);
+  border-bottom: 1px solid var(--gold);
+  padding: 10px 0;
+  box-shadow: 0 4px 24px rgba(200, 151, 42, 0.15);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ── Logo ── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo-text .logo-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--gold-bright);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.nav-logo-text .logo-sub {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(253, 248, 242, 0.8);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* ── Nav Links ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--grad-gold);
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold-bright);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 24px);
+}
+
+/* ── Nav CTA Button ── */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--grad-gold);
+  color: var(--navy-deep) !important;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-gold);
+  text-decoration: none;
+  transition: var(--transition-bounce);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  box-shadow: var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 1200;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--gold-bright);
+  border-radius: 3px;
+  transition: var(--transition);
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── Mobile Menu Overlay ── */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--navy-deep);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 32px 48px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Decorative stars in mobile menu */
+.mobile-menu::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: 100px;
+  right: 32px;
+  color: rgba(200, 151, 42, 0.2);
+  font-size: 12px;
+  letter-spacing: 8px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--cream);
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(200, 151, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+}
+
+.mobile-nav-link::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gold-bright);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--gold-bright);
+  padding-left: 12px;
+}
+
+.mobile-nav-link:hover::before,
+.mobile-nav-link.active::before {
+  opacity: 1;
+}
+
+.mobile-nav-link .arrow {
+  font-size: 14px;
+  color: var(--gold);
+}
+
+/* Mobile menu bottom actions */
+.mobile-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(200, 151, 42, 0.2);
+}
+
+.mobile-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mobile-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--gold-bright);
+  border: 2px solid var(--gold-bright);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mobile-call-btn:hover {
+  background: var(--gold-bright);
+  color: var(--navy-deep);
+}
+
+/* ── Nav overlay backdrop ── */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 14, 26, 0.7);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

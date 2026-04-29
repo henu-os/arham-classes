@@ -1,0 +1,498 @@
+/* ============================================================
+   RESPONSIVE — responsive.css
+   Mobile-first media queries for all pages
+   ============================================================ */
+
+/* ── 1200px — Large Desktop ── */
+@media (max-width: 1200px) {
+  :root {
+    --section-py: 80px;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .hero-grid {
+    gap: 40px;
+  }
+
+  .faculty-grid {
+    gap: 40px;
+  }
+}
+
+/* ── 1024px — Tablet Landscape ── */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .why-card {
+    min-width: 200px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .board-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+/* ── 768px — Tablet Portrait / Mobile Landscape ── */
+@media (max-width: 768px) {
+  :root {
+    --section-py: var(--section-py-sm);
+  }
+
+  /* Navbar */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 48px;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: left;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-right {
+    order: 2;
+  }
+
+  .hero-script {
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .hero-proof-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-feature-item {
+    font-size: 13px;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary,
+  .hero-btn-whatsapp {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-showcase {
+    max-width: 100%;
+  }
+
+  .hero-showcase-photo {
+    min-height: 340px;
+  }
+
+  .hero-showcase-card {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Why choose */
+  .why-grid {
+    gap: 20px;
+  }
+
+  .why-card {
+    min-width: 280px;
+    max-width: 100%;
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  /* Faculty */
+  .faculty-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .faculty-preview-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .faculty-preview-media {
+    min-height: 260px;
+  }
+
+  .faculty-preview-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Courses */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flip-card {
+    height: 360px;
+  }
+
+  /* Learning */
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Pillars */
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar-item::after {
+    display: none;
+  }
+
+  /* CTA Banner */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* Testimonials static */
+  .testimonials-static-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery */
+  .gallery-masonry {
+    column-count: 2;
+  }
+
+  /* Board cards */
+  .board-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Course detail */
+  .course-detail-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Values */
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Maths features */
+  .maths-features {
+    gap: 20px;
+  }
+
+  /* Form */
+  .form-card {
+    padding: 32px 24px;
+  }
+
+  /* batch info */
+  .batch-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Section header */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Announcement bar */
+  .announcement-bar {
+    font-size: 12px;
+    padding: 8px 40px;
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding: 80px 0 56px;
+  }
+}
+
+/* ── 640px — Small Mobile ── */
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 24px 14px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .why-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .board-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ── 480px — Extra Small ── */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.18;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .announcement-bar {
+    font-size: 11px;
+    padding: 8px 36px;
+    line-height: 1.4;
+  }
+
+  .hero {
+    padding: 70px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-proof-item {
+    padding: 12px;
+  }
+
+  .hero-showcase-photo {
+    min-height: 300px;
+  }
+
+  .card-padding-sm {
+    padding: 20px 16px;
+  }
+
+  .form-card {
+    padding: 24px 16px;
+  }
+
+  .admission-card {
+    padding: 28px 18px;
+  }
+
+  .ticker-content {
+    font-size: 12px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    padding: 5px 16px;
+  }
+
+  .stats-grid {
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 20px 10px;
+  }
+
+  .stat-number {
+    font-size: 1.9rem;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .gallery-masonry {
+    column-count: 1;
+  }
+
+  .gallery-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .flipcard {
+    height: 340px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .scroll-top {
+    bottom: 18px;
+    left: 18px;
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  /* Touch targets */
+  .nav-link,
+  .btn,
+  .filter-btn,
+  .footer-link,
+  .social-icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .mobile-nav-link {
+    font-size: 20px;
+    padding: 14px 0;
+  }
+
+  .maths-special {
+    padding: 32px 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ── Very small ── */
+@media (max-width: 360px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+
+  .hero-title { font-size: 1.95rem; }
+
+  .stat-number { font-size: 1.65rem; }
+
+  .container { padding: 0 12px; }
+}
+
+/* ── Print ── */
+@media print {
+  .announcement-bar,
+  .navbar,
+  .whatsapp-float,
+  .scroll-top,
+  .mobile-menu {
+    display: none !important;
+  }
+}

@@ -1,0 +1,199 @@
+/* ============================================================
+   FOOTER — footer.css
+   ============================================================ */
+
+.footer {
+  background: var(--navy-deep);
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 -4px 28px rgba(200, 151, 42, 0.3);
+  padding: 72px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 48px;
+}
+
+/* ── Column 1: Brand ── */
+.footer-brand {}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.footer-logo img {
+  height: 56px;
+  width: auto;
+}
+
+.footer-logo-text .logo-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--gold-bright);
+  letter-spacing: 0.06em;
+}
+
+.footer-logo-text .logo-sub {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(253,248,242,0.7);
+}
+
+.footer-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(253,248,242,0.65);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-commitment {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* ── Columns 2, 3, 4 ── */
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--grad-gold);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(253,248,242,0.65);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  padding: 2px 0;
+}
+
+.footer-link:hover {
+  color: var(--gold-bright);
+  padding-left: 6px;
+}
+
+.footer-link .link-arrow {
+  font-size: 10px;
+  color: var(--gold);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.footer-link:hover .link-arrow {
+  opacity: 1;
+}
+
+/* Contact items */
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(253,248,242,0.7);
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact-item:hover { color: var(--gold-bright); }
+
+.footer-contact-item .ci-icon {
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Bottom strip ── */
+.footer-bottom {
+  margin-top: 56px;
+  padding: 20px 0;
+  background: rgba(200,151,42,0.08);
+  border-top: 1px solid rgba(200,151,42,0.2);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-motto {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gold);
+  text-align: center;
+}
+
+.footer-copy {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(253,248,242,0.4);
+}
+
+/* ── Responsive footer ── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arham Coaching Classes Courses — Classes 5th to 12th, All Subjects, Expert Maths Coaching. CBSE, RBSE & IB Boards. Bhilwara, Rajasthan.">
+  <meta name="keywords" content="Arham coaching courses, coaching classes 5th to 12th Bhilwara, maths coaching CBSE RBSE IB, expert maths Bhilwara">
+  <meta property="og:title" content="Courses — Arham Coaching Classes | Bhilwara">
+  <meta property="og:description" content="Classes 5th–12th | All Subjects | Expert Maths Coaching | CBSE, RBSE & IB Boards">
+  <meta property="og:image" content="images/logo.png">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <title>Courses & Programs — Arham Coaching Classes | Bhilwara</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .course-expand-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(10,22,40,0.08);
+      transition: var(--transition);
+      margin-bottom: 28px;
+    }
+    .course-expand-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .course-expand-card .ceh {
+      background: var(--grad-navy);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .course-expand-card .ceh-icon { font-size: 42px; }
+    .course-expand-card .ceh-title { font-family:var(--font-heading);font-weight:800;font-size:1.3rem;color:var(--gold-bright); }
+    .course-expand-card .ceh-sub { font-family:var(--font-heading);font-size:14px;color:rgba(255,255,255,0.65);margin-top:4px; }
+    .course-expand-card .ceh-badge { margin-left:auto;background:var(--grad-gold);color:var(--navy-deep);font-family:var(--font-heading);font-weight:800;font-size:13px;padding:6px 18px;border-radius:var(--radius-pill); }
+    .course-expand-card .ceb { padding: 28px 32px; display:grid;grid-template-columns:1fr 1fr;gap:24px; }
+    .course-expand-card .ceb h4 { font-family:var(--font-heading);font-weight:700;font-size:12px;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px; }
+    .course-expand-card .ceb ul li { display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-body);padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.04); }
+    .course-expand-card .ceb ul li::before { content:'•';color:var(--gold-bright);font-size:18px; }
+    @media(max-width:640px){.course-expand-card .ceb{grid-template-columns:1fr;}.course-expand-card .ceh{flex-wrap:wrap;}.course-expand-card .ceh-badge{margin-left:0;}}
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcementBar" role="alert">
+    <span class="ann-text">🎓 Admissions Open! Classes 5th–12th &nbsp;|&nbsp; All Subjects &nbsp;|&nbsp; CBSE • RBSE • IB &nbsp;|&nbsp; Call: <a href="tel:9468608280" style="color:inherit;font-weight:900;">9468608280</a></span>
+    <button class="ann-close" aria-label="Dismiss">✕</button>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container"><div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home"><img src="images/logo.png" alt="Arham Coaching Classes" width="52" height="52"><div class="nav-logo-text"><span class="logo-name">ARHAM</span><span class="logo-sub">Coaching Classes</span></div></a>
+      <div class="nav-links" role="menubar">
+        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+        <a href="about.html" class="nav-link" role="menuitem">About</a>
+        <a href="courses.html" class="nav-link" role="menuitem">Courses</a>
+        <a href="gallery.html" class="nav-link" role="menuitem">Gallery</a>
+        <a href="testimonials.html" class="nav-link" role="menuitem">Testimonials</a>
+        <a href="admissions.html" class="nav-link" role="menuitem">Admissions</a>
+        <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+      </div>
+      <a href="admissions.html" class="nav-cta"><i class="fa-solid fa-graduation-cap"></i> Enroll Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div></div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav-links"><a href="index.html" class="mobile-nav-link">Home <span class="arrow">›</span></a><a href="about.html" class="mobile-nav-link">About <span class="arrow">›</span></a><a href="courses.html" class="mobile-nav-link">Courses <span class="arrow">›</span></a><a href="gallery.html" class="mobile-nav-link">Gallery <span class="arrow">›</span></a><a href="testimonials.html" class="mobile-nav-link">Testimonials <span class="arrow">›</span></a><a href="admissions.html" class="mobile-nav-link">Admissions <span class="arrow">›</span></a><a href="contact.html" class="mobile-nav-link">Contact <span class="arrow">›</span></a></nav>
+    <div class="mobile-menu-actions"><a href="https://wa.me/919468608280" class="mobile-wa-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a><a href="tel:9468608280" class="mobile-call-btn"><i class="fa-solid fa-phone"></i> Call: 9468608280</a></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label label-light mb-16">OUR PROGRAMS</span>
+      <h1 class="reveal from-bottom">Courses &amp; <span class="text-gradient-gold">Programs</span></h1>
+      <p class="reveal from-bottom" style="color:var(--gold-light);">Classes 5th to 12th — All Subjects | CBSE | RBSE | IB</p>
+      <nav class="breadcrumb reveal from-bottom" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>›</span><span aria-current="page">Courses</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ── COURSES DETAIL ── -->
+  <section class="section bg-cream" aria-labelledby="coursesDetailHeading">
+    <div class="container">
+      <div class="section-header reveal from-bottom">
+        <span class="section-label">CLASS-WISE PROGRAMS</span>
+        <div class="section-divider"><span class="diamond">◆</span></div>
+        <h2 id="coursesDetailHeading">Programs for <span class="text-gradient-gold">Every Class</span></h2>
+        <p class="section-sub">Tailored curriculum for every stage of a student's academic journey.</p>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="course-expand-card reveal from-bottom">
+        <div class="ceh">
+          <span class="ceh-icon" aria-hidden="true">📗</span>
+          <div>
+            <div class="ceh-title">Classes 5th – 8th</div>
+            <div class="ceh-sub">Foundation Building | All Subjects</div>
+          </div>
+          <div class="ceh-badge">Foundation</div>
+        </div>
+        <div class="ceb">
+          <div>
+            <h4>Subjects Covered</h4>
+            <ul>
+              <li>Mathematics</li><li>Science</li><li>English</li>
+              <li>Social Science</li><li>Hindi</li><li>Sanskrit (if applicable)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Program Features</h4>
+            <ul>
+              <li>Small batches — max 15 students</li>
+              <li>Weekly tests with parent feedback</li>
+              <li>Concept-based learning from the ground up</li>
+              <li>Regular revision &amp; doubt sessions</li>
+            </ul>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">CBSE</span>
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">RBSE</span>
+            </div>
+            <a href="admissions.html" class="btn btn-gold btn-sm" style="margin-top:16px;display:inline-flex;">Enquire Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-expand-card reveal from-bottom">
+        <div class="ceh">
+          <span class="ceh-icon" aria-hidden="true">📘</span>
+          <div>
+            <div class="ceh-title">Classes 9th – 10th</div>
+            <div class="ceh-sub">Board Exam Preparation | All Subjects</div>
+          </div>
+          <div class="ceh-badge">Board Prep</div>
+        </div>
+        <div class="ceb">
+          <div>
+            <h4>Subjects Covered</h4>
+            <ul>
+              <li>Mathematics</li><li>Science (Physics, Chemistry, Biology)</li>
+              <li>English &amp; Hindi</li><li>Social Science</li>
+              <li>Computer Science</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Program Features</h4>
+            <ul>
+              <li>Board exam-focused preparation</li>
+              <li>Previous year paper practice</li>
+              <li>Mock test series with analysis</li>
+              <li>One-on-one doubt clearing sessions</li>
+            </ul>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">CBSE</span>
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">RBSE</span>
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">IB</span>
+            </div>
+            <a href="admissions.html" class="btn btn-gold btn-sm" style="margin-top:16px;display:inline-flex;">Enquire Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="course-expand-card reveal from-bottom">
+        <div class="ceh">
+          <span class="ceh-icon" aria-hidden="true">📙</span>
+          <div>
+            <div class="ceh-title">Classes 11th – 12th</div>
+            <div class="ceh-sub">Senior Secondary | Science &amp; Commerce Streams</div>
+          </div>
+          <div class="ceh-badge">Senior Secondary</div>
+        </div>
+        <div class="ceb">
+          <div>
+            <h4>Science Stream</h4>
+            <ul>
+              <li>Mathematics (PCM)</li><li>Physics</li>
+              <li>Chemistry</li><li>Biology (PCB)</li><li>English</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Commerce Stream</h4>
+            <ul>
+              <li>Accountancy</li><li>Business Studies</li>
+              <li>Economics</li><li>Mathematics</li><li>English</li>
+            </ul>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">CBSE</span>
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">RBSE</span>
+              <span class="board-pill" style="color:var(--navy);border-color:var(--navy);">IB</span>
+            </div>
+            <a href="admissions.html" class="btn btn-gold btn-sm" style="margin-top:16px;display:inline-flex;">Enquire Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERT MATHS SPECIAL ── -->
+  <section class="section bg-navy-mid" aria-labelledby="mathsHeading">
+    <div class="container">
+      <div class="maths-special reveal scale-in">
+        <div class="score-badge">⭐ 90%+ Scorers in CBSE Maths</div>
+        <h2 id="mathsHeading" class="text-cream" style="font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:12px;">
+          Expert <span class="text-gradient-gold">Maths Coaching</span>
+        </h2>
+        <p style="color:var(--text-light);font-size:1.05rem;margin-bottom:8px;">Classes 6th – 12th | Specialised Program by Monika Jain (M.Sc)</p>
+        <p style="color:rgba(255,255,255,0.55);font-size:14px;margin-bottom:28px;">India's most feared subject — made simple, logical, and enjoyable.</p>
+
+        <div class="maths-features">
+          <div class="maths-feature">
+            <span class="mf-icon" aria-hidden="true">🧠</span>
+            <span>Concept-Based</span>
+          </div>
+          <div class="maths-feature">
+            <span class="mf-icon" aria-hidden="true">📝</span>
+            <span>Regular Tests</span>
+          </div>
+          <div class="maths-feature">
+            <span class="mf-icon" aria-hidden="true">❓</span>
+            <span>Doubt Solving</span>
+          </div>
+          <div class="maths-feature">
+            <span class="mf-icon" aria-hidden="true">📊</span>
+            <span>Progress Tracking</span>
+          </div>
+          <div class="maths-feature">
+            <span class="mf-icon" aria-hidden="true">🏆</span>
+            <span>90%+ Results</span>
+          </div>
+        </div>
+
+        <a href="admissions.html" class="btn btn-gold btn-lg" style="margin-top:8px;">
+          🎓 Enroll in Maths Coaching →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOARD COVERAGE ── -->
+  <section class="boards-section" aria-labelledby="boardsHeading">
+    <div class="container">
+      <div class="section-header reveal from-bottom">
+        <span class="section-label">BOARD COVERAGE</span>
+        <div class="section-divider"><span class="diamond">◆</span></div>
+        <h2 id="boardsHeading">Boards We <span class="text-gradient-gold">Cover</span></h2>
+        <p class="section-sub">Expert coaching across all three major boards in India.</p>
+      </div>
+      <div class="board-cards reveal-stagger">
+        <div class="board-card reveal scale-in">
+          <span class="board-icon" aria-hidden="true">🎓</span>
+          <h3>CBSE</h3>
+          <p>Central Board of Secondary Education — Best-in-class preparation with concept clarity and regular mock tests ensuring 90%+ results.</p>
+        </div>
+        <div class="board-card reveal scale-in">
+          <span class="board-icon" aria-hidden="true">📚</span>
+          <h3>RBSE</h3>
+          <p>Rajasthan Board of Secondary Education — Deep understanding of the RBSE curriculum with state-specific exam strategies.</p>
+        </div>
+        <div class="board-card reveal scale-in">
+          <span class="board-icon" aria-hidden="true">🌐</span>
+          <h3>IB</h3>
+          <p>International Baccalaureate — Advanced international curriculum coaching with a focus on analytical thinking and global standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LEARNING BEYOND BOOKS ── -->
+  <section class="learning-section" aria-labelledby="learningCoursesHeading">
+    <div class="container">
+      <div class="section-header reveal from-bottom">
+        <span class="section-label label-light">OUR METHODOLOGY</span>
+        <div class="section-divider"><span class="diamond" style="color:var(--gold-bright);">◆</span></div>
+        <h2 id="learningCoursesHeading" class="text-cream">Learning <span class="text-gradient-gold">Beyond Books</span></h2>
+        <p class="section-sub light">Our unique teaching approach builds confidence alongside knowledge.</p>
+      </div>
+      <div class="learning-grid reveal-stagger">
+        <div class="learning-card reveal scale-in"><span class="card-icon">👥</span><h3>Group Discussions</h3><p>Collaborative learning deepens understanding and builds communication skills.</p></div>
+        <div class="learning-card reveal scale-in"><span class="card-icon">🏆</span><h3>Quiz Competitions</h3><p>Gamified learning keeps students engaged and intellectually competitive.</p></div>
+        <div class="learning-card reveal scale-in"><span class="card-icon">📖</span><h3>Practice Sessions</h3><p>Structured practice builds deep exam confidence and subject mastery.</p></div>
+        <div class="learning-card reveal scale-in"><span class="card-icon">💪</span><h3>Confidence Building</h3><p>Every student leaves more empowered than when they arrived.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BATCH INFO ── -->
+  <section class="section bg-cream" aria-label="Batch information">
+    <div class="container">
+      <div class="batch-info reveal scale-in">
+        <div>
+          <h3>Small Batches for Personal Attention</h3>
+          <p>We believe every student deserves personalized attention. Our batch sizes are intentionally kept small so Monika Ma'am can focus on every individual.</p>
+          <a href="admissions.html" class="btn btn-gold" style="margin-top:20px;display:inline-flex;">Apply for 2026 Batch →</a>
+        </div>
+        <div class="batch-highlights">
+          <div class="batch-highlight"><span class="bh-num">15</span><span class="bh-label">Max Students<br>per Batch</span></div>
+          <div class="batch-highlight"><span class="bh-num">5+</span><span class="bh-label">Batches<br>Available</span></div>
+          <div class="batch-highlight"><span class="bh-num">90%+</span><span class="bh-label">Success<br>Rate</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-labelledby="courseCtaHeading">
+    <div class="container">
+      <h2 class="cta-title reveal from-bottom" id="courseCtaHeading">Ready to Excel?</h2>
+      <p class="cta-sub reveal from-bottom">Admissions Open 2026 | Limited Seats Available</p>
+      <div class="cta-buttons reveal from-bottom">
+        <a href="admissions.html" class="btn btn-gold btn-lg">🎓 Enroll Now — Free</a>
+        <a href="tel:9468608280" class="btn btn-outline-gold btn-lg">📞 Call: 9468608280</a>
+      </div>
+      <p class="cta-tagline italic-script reveal from-bottom">"Your Trust. Our Commitment. Their Success."</p>
+    </div>
+  </section>
+
+  <!-- Footer (compact) -->
+  <footer class="footer" role="contentinfo">
+    <div class="container"><div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="images/logo.png" alt="Arham Coaching Classes" width="56" height="56"><div class="footer-logo-text"><div class="logo-name">ARHAM</div><div class="logo-sub">Coaching Classes</div></div></a><p class="footer-tagline italic-script">"Where Learning Meets Excellence"</p><p class="footer-commitment italic-script">"Your Trust. Our Commitment. Their Success."</p><div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61573250147501" class="social-icon facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com/classes.arham/" class="social-icon instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/919468608280" class="social-icon whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><nav class="footer-links" aria-label="Footer navigation"><a href="index.html" class="footer-link"><span class="link-arrow">›</span>Home</a><a href="about.html" class="footer-link"><span class="link-arrow">›</span>About</a><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>Courses</a><a href="admissions.html" class="footer-link"><span class="link-arrow">›</span>Admissions</a><a href="contact.html" class="footer-link"><span class="link-arrow">›</span>Contact</a></nav></div>
+      <div class="footer-col"><h4>Courses</h4><div class="footer-links"><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>Classes 5th–8th</a><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>Classes 9th–10th</a><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>Classes 11th–12th</a><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>Expert Maths Coaching</a><a href="courses.html" class="footer-link"><span class="link-arrow">›</span>IB Board Coaching</a></div></div>
+      <div class="footer-col"><h4>Contact Us</h4><div class="footer-contact-items"><div class="footer-contact-item"><span class="ci-icon">📍</span><span>G-387, 388 Vaibhav Nagar, Shastri Nagar, Bhilwara, Rajasthan</span></div><a href="tel:9468608280" class="footer-contact-item"><span class="ci-icon">📞</span><span>9468608280</span></a><a href="https://wa.me/919468608280" class="footer-contact-item" target="_blank" rel="noopener noreferrer"><span class="ci-icon">💬</span><span>WhatsApp: 9468608280</span></a></div></div>
+    </div></div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><p class="footer-motto italic-script">"Your Trust. Our Commitment. Their Success."</p><p class="footer-copy">© 2026 Henu OS Pvt Ltd. All Rights Reserved.</p></div></div></div>
+  </footer>
+
+  <div class="whatsapp-float"><a href="https://wa.me/919468608280" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><div class="whatsapp-tooltip">Chat with Us 💬</div></div>
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
