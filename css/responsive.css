@@ -60,6 +60,11 @@
     gap: 40px;
   }
 
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .board-cards {
     grid-template-columns: repeat(2, 1fr);
   }
